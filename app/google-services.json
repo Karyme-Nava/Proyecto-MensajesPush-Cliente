@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "761078930872",
+    "project_id": "cliente-mensajespush",
+    "storage_bucket": "cliente-mensajespush.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761078930872:android:12662de547bb93cb8fc34d",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_mensajespush_cliente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761078930872-1qsfb4n9on0k94p0qciuoheud4q3oeei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.proyecto_mensajespush_cliente",
+            "certificate_hash": "913d661c8429298b1a676ac0689cacfda72d983f"
+          }
+        },
+        {
+          "client_id": "761078930872-ktfmvo2as3indth15rvo8kaossmimuqd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_1vKHkfJrhRaWAVEH5sQ6xXxYK0fSguE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761078930872-ktfmvo2as3indth15rvo8kaossmimuqd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
