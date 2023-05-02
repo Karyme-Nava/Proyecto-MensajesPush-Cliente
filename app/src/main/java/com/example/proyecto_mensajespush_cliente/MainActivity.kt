@@ -1,17 +1,26 @@
 package com.example.proyecto_mensajespush_cliente
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
+import androidx.core.content.getSystemService
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.messaging.ktx.messaging
 
 class MainActivity : AppCompatActivity() {
+    lateinit var tvToken : TextView
+
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
     ) { isGranted: Boolean ->
@@ -44,8 +53,18 @@ class MainActivity : AppCompatActivity() {
 
         askNotificationPermission()
 
+        tvToken = findViewById<TextView>(R.id.tvToken)
         Firebase.messaging.getToken().addOnCompleteListener {
             Log.i("token firebase", it.result)
+            tvToken.setText("Tu token es: ${it.result}")
         }
+    }
+
+    fun copiarToken(view: View){
+        val portapapeles = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        var dato : ClipData
+        val token = tvToken.text
+        dato = ClipData.newPlainText("Token", token.subSequence(13, token.length))
+        portapapeles.setPrimaryClip(dato)
     }
 }

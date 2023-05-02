@@ -16,7 +16,7 @@
             android:resource="@android:drawable/stat_notify_chat" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/purple_500" />
+            android:resource="@color/orange_500" />
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
