@@ -14,7 +14,7 @@ import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
-    /*override fun onNewToken(token: String) {
+    override fun onNewToken(token: String) {
         Log.d(TAG, "Refreshed token: $token")
 
         // If you want to send messages to this application instance or
@@ -35,12 +35,13 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
         // Check if message contains a data payload.
         if (message.data.isNotEmpty()) {
-            Log.d(TAG, "Message data payload: ${message.data}")
+            Log.d("MensajeFA", "Message data payload: ${message.data}")
         }
 
         // Check if message contains a notification payload.
+        //This line will print out push message which we will send from our server
         message.notification?.let {
-            Log.d(TAG, "Message Notification Body: ${it.body}")
+            Log.d("NotiFA", "Message Notification Body: ${it.body}")
         }
 
         // Also if you intend on generating your own notifications as a result of a received FCM
@@ -73,5 +74,5 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         }
 
         notificationManager.notify(0 /* ID of notification */, notificationBuilder.build())
-    }*/
+    }
 }
